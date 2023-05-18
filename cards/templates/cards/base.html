@@ -1,0 +1,29 @@
+<!-- cards/templates/cards/base.html -->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+</style>
+
+<head>
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>플래쉬 카드 앱</h1>
+        {% include "cards/navigation.html" %}
+    </header>
+    <main>
+        {% block content %}
+            <h2>플래쉬 카드 앱에 온 것을 환영합니다!</h2>
+        {% endblock content %}
+    </main>
+</body>
+
+</html>
